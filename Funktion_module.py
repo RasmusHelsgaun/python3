@@ -6,10 +6,10 @@ def get_copenhagen_population_data_array():
     return np.genfromtxt(filename, delimiter=',', dtype=np.uint, skip_header=1)
 
 #3. exercise
-english_speaking_countries = [5170,5309, 5502, 5303, 5305,5526, 5314, 5326,5339, 5308,5142,
-5352, 5514, 5625, 5347, 5311, 5374,5390]
-
 def get_amount_english_and_nonenglish(year=2015):
+    english_speaking_countries = [5170,5309, 5502, 5303, 5305,5526, 5314, 5326,5339, 5308,5142,
+5352, 5514, 5625, 5347, 5311, 5374,5390]
+    
     cph_pop = get_copenhagen_population_data_array()
     #extracts all data from the given year
     year_data = cph_pop[cph_pop[:,0] == year]
